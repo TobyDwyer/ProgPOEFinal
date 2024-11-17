@@ -1,0 +1,29 @@
+﻿<Window x:Class="MunicipalAppProgPoe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MunicipalAppProgPoe"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="800" MinHeight="650" MinWidth="400" WindowStartupLocation="CenterScreen"
+        Background="#E3F2FD" Foreground="#0D47A1">
+
+    <Grid>
+        <!-- Keep the Frame here so that it stays visible when MainContent is hidden -->
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Row="1"/>
+
+        <Label x:Name="lblIssueCounter" Content="Total Issues Reported: 0" FontSize="16" HorizontalAlignment="Right" Margin="0,10,10,593" Foreground="#0D47A1" />
+
+        <!-- Main content grid for buttons or other elements -->
+        <Grid x:Name="MainContent" Grid.Row="0">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Content="Report Issue" Width="240" Height="32" Margin="0,0,0,0" Click="BtnReportIssue"
+                        Background="Azure" Foreground="Black" FontSize="16"/>
+                <Button Content="Events and Announcements" Width="240" Height="32" Margin="0,10,0,0"
+                        Background="Azure" Foreground="Black" FontSize="16" Click="Button_Click"/>
+                <Button Content="Service Request Status" Width="240" Height="32" Margin="0,10,0,0"
+                        Background="Azure" Foreground="Black" FontSize="16"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

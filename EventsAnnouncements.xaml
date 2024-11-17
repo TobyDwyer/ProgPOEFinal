@@ -1,0 +1,28 @@
+﻿<Page x:Class="MunicipalAppProgPoe.EventsAnnouncements"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Events and Announcements" Height="450" Width="800" MinWidth="800" Background="#E3F2FD">
+
+    <Grid>
+        <!-- Title -->
+        <Label Content="Local Events and Announcements" FontSize="24" FontWeight="Bold" HorizontalAlignment="Left" Margin="219,10,0,403" Foreground="#0D47A1"/>
+
+        <!-- Search -->
+        <Button Content="Search" Width="100" Height="25" Margin="690,70,10,355" Click="BtnSearch_Click" Background="Azure"/>
+        <Button Content="Reset" Width="100" Height="25" Margin="576,70,124,355" Click="BtnReset_Click" Background="Azure"/>
+        <Button Content="Show Reccomended Events" Height="25" Margin="400,70,241,355" Click="BtnReccomended_Click" Background="Azure"/>
+
+        <!-- List of Events -->
+        <ListView x:Name="lvEvents" Margin="10,100,10,10" BorderBrush="#0D47A1" BorderThickness="1">
+            <!-- Define how each event should be displayed -->
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Event Name" DisplayMemberBinding="{Binding Name}" Width="200"/>
+                    <GridViewColumn Header="Date" DisplayMemberBinding="{Binding Date}" Width="150"/>
+                    <GridViewColumn Header="Category" DisplayMemberBinding="{Binding Category}" Width="150"/>
+                    <GridViewColumn Header="Location" DisplayMemberBinding="{Binding Location}" Width="200"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Page>
