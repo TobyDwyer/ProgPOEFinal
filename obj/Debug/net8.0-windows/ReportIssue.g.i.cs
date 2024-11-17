@@ -100,7 +100,7 @@ namespace MunicipalAppProgPoe {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MunicipalAppProgPoe;V1.0.0.0;component/reportissue.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MunicipalAppProgPoe;component/reportissue.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ReportIssue.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

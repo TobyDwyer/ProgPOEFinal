@@ -9,7 +9,6 @@ namespace MunicipalAppProgPoe
         private Dictionary<string, Event> eventDictionary = new Dictionary<string, Event>();
         private HashSet<string> uniqueCategories = new HashSet<string>();
         private HashSet<DateTime> uniqueDates = new HashSet<DateTime>();
-        private Stack<string> searchHistory = new Stack<string>();
         private Queue<string> userSearchPatterns = new Queue<string>();
         private PriorityQueue<Event, DateTime> eventQueue = new PriorityQueue<Event, DateTime>();
 
@@ -69,12 +68,12 @@ namespace MunicipalAppProgPoe
                 string? category = searchWindow.Category?.ToLower();
                 DateTime? eventDate = searchWindow.EventDate;
 
-                // Store search term in the history stack
-                searchHistory.Push(eventName ?? "");
                 if (!string.IsNullOrEmpty(eventName))
-                    userSearchPatterns.Enqueue(eventName);
+                {
+                    UpdateSearchPatterns(eventName);
+                }
 
-                // Filter events based on search input
+                // Filter events
                 var filteredEvents = EventsList.Where(ev =>
                     (string.IsNullOrEmpty(eventName) || ev.Name.ToLower().Contains(eventName)) &&
                     (string.IsNullOrEmpty(category) || ev.Category.ToLower().Contains(category)) &&
@@ -82,57 +81,88 @@ namespace MunicipalAppProgPoe
 
                 lvEvents.ItemsSource = filteredEvents;
 
+                if (!filteredEvents.Any())
+                {
+                    MessageBox.Show("No events match your search criteria.", "No Results", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
             }
         }
 
-        // Reset button click event to clear search filters
         private void BtnReset_Click( object sender, RoutedEventArgs e )
         {
             lvEvents.ItemsSource = EventsList;
         }
 
-        // Retrieve event by name from dictionary
-        private Event? GetEventByName( string name )
+
+        private void UpdateSearchPatterns( string searchTerm )
         {
-            return eventDictionary.ContainsKey(name.ToLower()) ? eventDictionary[name.ToLower()] : null;
+            const int MaxSearchTerms = 10;
+            if (userSearchPatterns.Count >= MaxSearchTerms)
+            {
+                userSearchPatterns.Dequeue();
+            }
+            userSearchPatterns.Enqueue(searchTerm);
         }
 
-        // Recommendation logic based on user search history
         private List<Event> GetRecommendedEvents()
         {
-            if (!userSearchPatterns.Any()) return new List<Event>();
+            var recommendedEvents = new Dictionary<Event, int>();
 
-            // Find the most searched term
-            var mostSearchedTerm = userSearchPatterns.GroupBy(x => x)
-                                                     .OrderByDescending(g => g.Count())
-                                                     .First().Key;
+            foreach (var term in userSearchPatterns)
+            {
+                foreach (var events in EventsList)
+                {
+                    int score = 0;
 
-            // Recommend events based on most searched term
-            return EventsList.Where(ev => ev.Name.ToLower().Contains(mostSearchedTerm) ||
-                                          ev.Category.ToLower().Contains(mostSearchedTerm)).ToList();
+                    //Scores based on crrelation ot the search
+                    if (events.Name.ToLower().Contains(term)) score += 3;
+                    if (events.Category.ToLower().Contains(term)) score += 2;
+                    if (events.Location.ToLower().Contains(term)) score += 1;
+
+                    if (score > 0)
+                    {
+                        if (!recommendedEvents.ContainsKey(events))
+                            recommendedEvents[events] = score;
+                        else
+                            recommendedEvents[events] += score;
+                    }
+                }
+            }
+
+            // Recommendations returned based on score
+            return recommendedEvents.OrderByDescending(kvp => kvp.Value)
+                                     .Select(kvp => kvp.Key)
+                                     .ToList();
         }
 
-        // Show recommendations to the user
         private void ShowRecommendations()
         {
             var recommendedEvents = GetRecommendedEvents();
             if (recommendedEvents.Any())
             {
                 lvEvents.ItemsSource = recommendedEvents;
+                MessageBox.Show("Showing recommended events based on your search patterns.", "Recommendations", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
-                MessageBox.Show("No recommendations found based on your search.",
-                            "No Recommendations", MessageBoxButton.OK, MessageBoxImage.Information);
-
+                MessageBox.Show("No recommendations found based on your search.", "No Recommendations", MessageBoxButton.OK, MessageBoxImage.Information);
                 lvEvents.ItemsSource = EventsList;
             }
         }
 
-
         private void BtnReccomended_Click( object sender, RoutedEventArgs e )
         {
             ShowRecommendations();
+        }
+
+        private List<Event> GetSortedEvents()
+        {
+            return eventDictionary.Values.OrderBy(e => e.Name).ToList();
+        }
+
+        private void BtnSortByName_Click( object sender, RoutedEventArgs e )
+        {
+            lvEvents.ItemsSource = GetSortedEvents();
         }
     }
 

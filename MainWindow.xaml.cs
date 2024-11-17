@@ -46,5 +46,11 @@ namespace MunicipalAppProgPoe
             MainFrame.Navigate(new EventsAnnouncements());
             MainContent.Visibility = Visibility.Hidden;
         }
+
+        private void Button_Click_1( object sender, RoutedEventArgs e )
+        {
+            MainFrame.Navigate(new ServiceRequest());
+            MainContent.Visibility = Visibility.Hidden;
+        }
     }
 }

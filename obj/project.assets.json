@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Toby\\OneDrive - ADvTECH Ltd\\VC\\Modules\\Y3.2\\PROG\\MunicipalAppProgPoe\\MunicipalAppProgPoe.csproj",
+      "projectUniqueName": "C:\\Users\\Toby\\OneDrive - ADvTECH Ltd\\VC\\Modules\\Y3.2\\PROG\\prog7312-part-2-TobyDwyer\\MunicipalAppProgPoe.csproj",
       "projectName": "MunicipalAppProgPoe",
-      "projectPath": "C:\\Users\\Toby\\OneDrive - ADvTECH Ltd\\VC\\Modules\\Y3.2\\PROG\\MunicipalAppProgPoe\\MunicipalAppProgPoe.csproj",
+      "projectPath": "C:\\Users\\Toby\\OneDrive - ADvTECH Ltd\\VC\\Modules\\Y3.2\\PROG\\prog7312-part-2-TobyDwyer\\MunicipalAppProgPoe.csproj",
       "packagesPath": "C:\\Users\\Toby\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Toby\\OneDrive - ADvTECH Ltd\\VC\\Modules\\Y3.2\\PROG\\MunicipalAppProgPoe\\obj\\",
+      "outputPath": "C:\\Users\\Toby\\OneDrive - ADvTECH Ltd\\VC\\Modules\\Y3.2\\PROG\\prog7312-part-2-TobyDwyer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
