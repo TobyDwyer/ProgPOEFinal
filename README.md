@@ -30,7 +30,7 @@ Before you begin, ensure that you have the following prerequisites:
 1. **Clone the repository**:  
    To get started, clone this repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/MunicipalAppProgPoe.git
+   git clone https://github.com/TobyDwyer/ProgPOEFinal.git
    
 2. **Open the Solution in Visual Studio**:  
    After opening the solution in Visual Studio, ensure that all the required dependencies are restored by clicking on **Tools > NuGet Package Manager > Restore NuGet Packages**.
@@ -50,12 +50,6 @@ Before you begin, ensure that you have the following prerequisites:
    - **Service Request**: View, add, and search service requests.
    - **Report Issue**: Report new municipal issues with attachment options.
    - **Events & Announcements**: Browse and search through upcoming events.
-
----
-
-## Deployment
-
-For deployment, you can publish the application via Visual Studio’s publishing tools or create a standalone executable.
 
 ---
 
