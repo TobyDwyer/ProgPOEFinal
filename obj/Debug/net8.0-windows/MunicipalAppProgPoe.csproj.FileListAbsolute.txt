@@ -53,3 +53,32 @@ C:\Users\Toby\OneDrive - ADvTECH Ltd\VC\Modules\Y3.2\PROG\prog7312-part-2-TobyDw
 C:\Users\Toby\OneDrive - ADvTECH Ltd\VC\Modules\Y3.2\PROG\prog7312-part-2-TobyDwyer\obj\Debug\net8.0-windows\MunicipalAppProgPoe.pdb
 C:\Users\Toby\OneDrive - ADvTECH Ltd\VC\Modules\Y3.2\PROG\prog7312-part-2-TobyDwyer\obj\Debug\net8.0-windows\MunicipalAppProgPoe.genruntimeconfig.cache
 C:\Users\Toby\OneDrive - ADvTECH Ltd\VC\Modules\Y3.2\PROG\prog7312-part-2-TobyDwyer\obj\Debug\net8.0-windows\ref\MunicipalAppProgPoe.dll
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\bin\Debug\net8.0-windows\MunicipalAppProgPoe.exe
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\bin\Debug\net8.0-windows\MunicipalAppProgPoe.deps.json
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\bin\Debug\net8.0-windows\MunicipalAppProgPoe.runtimeconfig.json
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\bin\Debug\net8.0-windows\MunicipalAppProgPoe.dll
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\bin\Debug\net8.0-windows\MunicipalAppProgPoe.pdb
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\EventsAnnouncements.baml
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\ReportIssue.baml
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\SearchWindow.baml
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\ServiceRequest.baml
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\EventsAnnouncements.g.cs
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\ReportIssue.g.cs
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\SearchWindow.g.cs
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\ServiceRequest.g.cs
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\App.g.cs
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\MunicipalAppProgPoe_MarkupCompile.cache
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\MunicipalAppProgPoe_MarkupCompile.lref
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\MunicipalAppProgPoe.g.resources
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\MunicipalAppProgPoe.GeneratedMSBuildEditorConfig.editorconfig
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\MunicipalAppProgPoe.AssemblyInfoInputs.cache
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\MunicipalAppProgPoe.AssemblyInfo.cs
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\MunicipalAppProgPoe.csproj.CoreCompileInputs.cache
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\MunicipalAppProgPoe.sourcelink.json
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\MunicipalAppProgPoe.dll
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\refint\MunicipalAppProgPoe.dll
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\MunicipalAppProgPoe.pdb
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\MunicipalAppProgPoe.genruntimeconfig.cache
+C:\Coding\Uni\2024 s2\Prog\ProgPOEFinal\obj\Debug\net8.0-windows\ref\MunicipalAppProgPoe.dll

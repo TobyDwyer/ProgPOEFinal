@@ -7,6 +7,9 @@
         <!-- Title -->
         <Label Content="Local Events and Announcements" FontSize="24" FontWeight="Bold" HorizontalAlignment="Left" Margin="219,10,0,403" Foreground="#0D47A1"/>
 
+        <!-- BackButton -->
+        <Button Content="Back" Width="56" Height="23" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Click="btnBack_Click" Background="Azure"/>
+
         <!-- Search -->
         <Button Content="Search" Width="100" Height="25" Margin="690,70,10,355" Click="BtnSearch_Click" Background="Azure"/>
         <Button Content="Reset" Width="100" Height="25" Margin="576,70,124,355" Click="BtnReset_Click" Background="Azure"/>

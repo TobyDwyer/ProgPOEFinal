@@ -88,6 +88,16 @@ namespace MunicipalAppProgPoe
             }
         }
 
+        private void btnBack_Click( object sender, RoutedEventArgs e )
+        {
+
+            if (Window.GetWindow(this) is MainWindow mainWindow)
+            {
+                mainWindow.ClearMainFrame();
+                mainWindow.ShowMainContent();
+            }
+        }
+
         private void BtnReset_Click( object sender, RoutedEventArgs e )
         {
             lvEvents.ItemsSource = EventsList;
@@ -181,4 +191,6 @@ namespace MunicipalAppProgPoe
             Location = location;
         }
     }
+
+
 }

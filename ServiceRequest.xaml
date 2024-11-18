@@ -6,6 +6,15 @@
         <!-- Header -->
         <TextBlock Text="Service Request Status" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,20"/>
 
+        <!-- BackButton -->
+        <Button Content="Back" Width="56" Height="23" HorizontalAlignment="Left" Margin="0,22,0,0" VerticalAlignment="Top" Click="btnBack_Click" Background="Azure"/>
+
+        <!-- Related Button -->
+        <Button Content="Related Items" Width="81" Height="23" HorizontalAlignment="Left" Margin="122,22,0,0" VerticalAlignment="Top" Click="BtnShowRelatedItems_Click" Background="Azure"/>
+
+        <!-- OptimizeButton -->
+        <Button Content="Sort " Width="56" Height="23" HorizontalAlignment="Left" Margin="61,22,0,0" VerticalAlignment="Top" Click="BtnOptimizeDisplay_Click" Background="Azure"/>
+
         <!-- ListView for displaying requests -->
         <ListView x:Name="lvRequest" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="200" Margin="0,50,0,0">
             <ListView.View>
@@ -19,8 +28,10 @@
 
         <!-- Search Section -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,270,0,0">
-            <TextBlock Text="Search by ID:" VerticalAlignment="Center" Margin="0,0,10,0"/>
-            <TextBox Name="txtSearchId" Width="200" Margin="0,0,10,0"/>
+            <TextBlock Text="Search by Description:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <TextBox Name="txtSearchDescription" Width="200" Margin="0,0,10,0"/>
+            <TextBlock Text="Status:" VerticalAlignment="Center" Margin="10,0,10,0"/>
+            <TextBox Name="txtSearchStatus" Width="200" Margin="0,0,10,0"/>
             <Button Content="Search" Width="100" Click="BtnSearch_Click"/>
         </StackPanel>
 
@@ -38,16 +49,19 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="ID:" Grid.Row="0" Grid.Column="0" Margin="5"/>
-                <TextBox Name="txtId" Grid.Row="0" Grid.Column="1" Margin="5"/>
+                <TextBlock Text="Description:" Grid.Row="0" Grid.Column="0" Margin="5"/>
+                <TextBox Name="txtDescription" Grid.Row="0" Grid.Column="1" Margin="5"/>
 
-                <TextBlock Text="Description:" Grid.Row="1" Grid.Column="0" Margin="5"/>
-                <TextBox Name="txtDescription" Grid.Row="1" Grid.Column="1" Margin="5"/>
+                <TextBlock Text="Status:" Grid.Row="1" Grid.Column="0" Margin="5"/>
+                <ComboBox Name="cmbStatus" Grid.Row="1" Grid.Column="1" Margin="5">
+                    <ComboBoxItem Content="Pending"/>
+                    <ComboBoxItem Content="In Progress"/>
+                    <ComboBoxItem Content="Completed"/>
+                </ComboBox>
 
-                <TextBlock Text="Status:" Grid.Row="2" Grid.Column="0" Margin="5"/>
-                <TextBox Name="txtStatus" Grid.Row="2" Grid.Column="1" Margin="5"/>
+                <Button Content="Add Request" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" Margin="5" Click="BtnAddRequest_Click"/>
 
-                <Button Content="Add Request" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right" Margin="5" Click="BtnAddRequest_Click"/>
+
             </Grid>
         </GroupBox>
 
