@@ -11,9 +11,7 @@ Welcome to the **MunicipalAppProgPoe**! This application is designed to help man
 3. [Running the Program](#running-the-program)
 4. [Features](#features)
 5. [Usage](#usage)
-6. [File Structure](#file-structure)
-7. [Contributing](#contributing)
-8. [License](#license)
+
 
 ---
 
