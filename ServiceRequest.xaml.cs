@@ -155,6 +155,8 @@ namespace MunicipalAppProgPoe
         {
             int defaultWeight = 3;
 
+            serviceGraph.AddNode(newId);
+
             var newNode = avlTree.Search(newId);
             if (newNode == null) return;
 
@@ -163,7 +165,7 @@ namespace MunicipalAppProgPoe
             var allNodes = avlTree.InOrderTraversal();
             foreach (var node in allNodes)
             {
-                if (node.Id == newId) continue;
+                if (node.Id == newId) continue; // Skip the current node
 
                 var nodeWords = node.Description.ToLower().Split(' ', StringSplitOptions.RemoveEmptyEntries);
                 var commonWords = newWords.Intersect(nodeWords);
@@ -172,6 +174,7 @@ namespace MunicipalAppProgPoe
                 {
                     serviceGraph.AddNode(newId);
                     serviceGraph.AddNode(node.Id);
+
                     serviceGraph.AddEdge(newId, node.Id, defaultWeight);
                 }
             }
